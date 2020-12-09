@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "memos",
+  "version": "${version}",
+  "name": "Memories",
+  "description": "Automatically snaps picture every interval.",
+  "authors": [
+    "akio"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/memos/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "memos.Memories"
+    ],
+    "client": [],
+    "server": [],
+    "modmenu": [ "memos.config.MemoriesModMenuEntry" ]
+  },
+  "mixins": [
+    "memos.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.10.8",
+    "fabric": "*"
+  }
+}

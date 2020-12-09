@@ -1,0 +1,14 @@
+{
+  "key.memos.name": "Memories",
+  "category.memos.name": "Open Memories Config",
+  "config.memos.title": "Memories Config",
+  "config.memos.category.none": "",
+  "config.memos.stopwatchEnabled": "Stopwatch Enabled:",
+  "config.memos.stopwatchEnabled.tooltip": "Should stopwatch feature be enabled.",
+  "config.memos.interval": "Interval:",
+  "config.memos.interval.tooltip": "How often screenshot should be taken(in minutes).",
+  "config.memos.modifiedFileName": "Modified File Name:",
+  "config.memos.modifiedFileName.tooltip": "Should screenshot name be changed(dd-mm-yyyy_hh.mm).",
+  "config.memos.chatMessage": "Chat Messages:",
+  "config.memos.chatMessage.tooltip": "Should screenshot message be displayed."
+}

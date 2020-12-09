@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "memos.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "ScreenshotUtilsMixin",
+    "ClientWorldMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

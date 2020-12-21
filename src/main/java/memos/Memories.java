@@ -2,7 +2,8 @@ package memos;
 
 import memos.config.Config;
 import memos.config.ConfigScreen;
-import net.fabricmc.api.ModInitializer;
+import memos.utils.Stopwatch;
+import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
@@ -13,7 +14,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.lwjgl.glfw.GLFW;
 
-public class Memories implements ModInitializer {
+
+
+public class Memories implements ClientModInitializer {
 
     public static Logger LOGGER = LogManager.getLogger();
 
@@ -22,8 +25,13 @@ public class Memories implements ModInitializer {
 
     private static KeyBinding configKey;
 
+
+    public static void log(Level level, String message){
+        LOGGER.log(level, "["+MOD_NAME+"] " + message);
+    }
+
     @Override
-    public void onInitialize() {
+    public void onInitializeClient() {
         log(Level.INFO, "Initializing");
         Config.loadConfig();
         configKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
@@ -39,11 +47,4 @@ public class Memories implements ModInitializer {
         });
         new Thread(Stopwatch.getInstance()).start();
     }
-
-
-
-    public static void log(Level level, String message){
-        LOGGER.log(level, "["+MOD_NAME+"] " + message);
-    }
-
 }

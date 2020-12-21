@@ -13,10 +13,9 @@
   "icon": "assets/memos/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "memos.Memories"
-    ],
-    "client": [],
+    "main": [],
+    "client": [
+      "memos.Memories"],
     "server": [],
     "modmenu": [ "memos.config.MemoriesModMenuEntry" ]
   },

@@ -1,7 +1,7 @@
 package memos.mixin;
 
 
-import memos.Utils;
+import memos.utils.MemosScreenshotUtils;
 import net.minecraft.client.gl.Framebuffer;
 import net.minecraft.client.util.ScreenshotUtils;
 import net.minecraft.text.Text;
@@ -16,10 +16,11 @@ public class ScreenshotUtilsMixin {
 
 
     /**
-     * @author me
+     * @author memories
+     * @reason changing screenshot directory and name
      */
     @Overwrite
     public static void saveScreenshot(File gameDirectory, int framebufferWidth, int framebufferHeight, Framebuffer framebuffer, Consumer<Text> messageReceiver) {
-        ScreenshotUtils.saveScreenshot(gameDirectory, Utils.getFilename(), framebufferWidth, framebufferHeight, framebuffer, Utils.getMessageReceiver());
+            ScreenshotUtils.saveScreenshot(gameDirectory, MemosScreenshotUtils.getLocation(), framebufferWidth, framebufferHeight, framebuffer, MemosScreenshotUtils.getMessageReceiver());
     }
 }

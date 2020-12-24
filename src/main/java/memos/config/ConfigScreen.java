@@ -4,7 +4,6 @@ import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import memos.utils.MemosScreenshotUtils;
-import memos.utils.Stopwatch;
 import memos.utils.StopwatchVisibility;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.text.TranslatableText;
@@ -65,7 +64,6 @@ public class ConfigScreen {
                 .setMin(0.16f)
                 .setSaveConsumer(value -> {
                     Config.stopwatchInterval = value;
-                    Stopwatch.reset();
                 })
                 .setTooltip(new TranslatableText("config.memos.stopwatchInterval.tooltip"))
                 .build());
